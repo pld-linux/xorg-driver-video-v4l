@@ -1,5 +1,5 @@
 Summary:	X.org video driver for video4linux cards
-Summary(pl):	Sterownik obrazu X.org dla kart video4linux
+Summary(pl.UTF-8):   Sterownik obrazu X.org dla kart video4linux
 Name:		xorg-driver-video-v4l
 Version:	0.1.1
 Release:	0.1
@@ -26,11 +26,11 @@ of hardware which is supported by a video4linux (kernel-) device
 driver and is able to handle video overlay. bt848/bt878-based TV cards
 are the most popular hardware these days.
 
-%description -l pl
-Sterownik obrazu X.org dla kart video4linux. Udostêpnia port
-rozszerzenia Xvideo dla nak³adki obrazu. Dzia³a z ka¿dym kawa³kiem
-sprzêtu obs³ugiwanym przez sterownik j±dra video4linux, potrafi±cym
-obs³u¿yæ nak³adkê obrazu. Najpopularniejsze z nich to karty
+%description -l pl.UTF-8
+Sterownik obrazu X.org dla kart video4linux. UdostÄ™pnia port
+rozszerzenia Xvideo dla nakÅ‚adki obrazu. DziaÅ‚a z kaÅ¼dym kawaÅ‚kiem
+sprzÄ™tu obsÅ‚ugiwanym przez sterownik jÄ…dra video4linux, potrafiÄ…cym
+obsÅ‚uÅ¼yÄ‡ nakÅ‚adkÄ™ obrazu. Najpopularniejsze z nich to karty
 telewizyjne bt848/bt878.
 
 %prep
