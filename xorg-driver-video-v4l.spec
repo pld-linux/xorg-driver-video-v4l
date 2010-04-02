@@ -2,7 +2,7 @@ Summary:	X.org video driver for video4linux cards
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla kart video4linux
 Name:		xorg-driver-video-v4l
 Version:	0.2.0
-Release:	5
+Release:	6
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-v4l-%{version}.tar.bz2
