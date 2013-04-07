@@ -1,0 +1,11 @@
+--- xf86-video-v4l-0.2.0/configure.ac~	2008-03-19 21:42:34.000000000 +0100
++++ xf86-video-v4l-0.2.0/configure.ac	2013-04-07 21:30:04.200813090 +0200
+@@ -27,7 +27,7 @@
+         xf86-video-v4l)
+ 
+ AC_CONFIG_SRCDIR([Makefile.am])
+-AM_CONFIG_HEADER([config.h])
++AC_CONFIG_HEADERS([config.h])
+ AC_CONFIG_AUX_DIR(.)
+ 
+ AM_INIT_AUTOMAKE([dist-bzip2])
