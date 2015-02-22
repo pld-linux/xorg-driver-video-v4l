@@ -2,13 +2,14 @@ Summary:	X.org video driver for video4linux cards
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla kart video4linux
 Name:		xorg-driver-video-v4l
 Version:	0.2.0
-Release:	19
+Release:	20
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-v4l-%{version}.tar.bz2
 # Source0-md5:	2251ae2a0a905764941cd7b098e85ad1
 Patch0:		support_v4l2_only_drivers.patch
 Patch1:		am.patch
+Patch2:		build-fix.patch
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -42,6 +43,7 @@ telewizyjne bt848/bt878.
 %setup -q -n xf86-video-v4l-%{version}
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__libtoolize}
