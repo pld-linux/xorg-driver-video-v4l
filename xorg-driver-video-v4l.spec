@@ -1,24 +1,22 @@
 Summary:	X.org video driver for video4linux cards
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla kart video4linux
 Name:		xorg-driver-video-v4l
-Version:	0.2.0
-Release:	23
+Version:	0.3.0
+Release:	1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-v4l-%{version}.tar.bz2
-# Source0-md5:	2251ae2a0a905764941cd7b098e85ad1
-Patch0:		support_v4l2_only_drivers.patch
-Patch1:		am.patch
-Patch2:		build-fix.patch
-URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+Source0:	https://xorg.freedesktop.org/releases/individual/driver/xf86-video-v4l-%{version}.tar.bz2
+# Source0-md5:	167b82a486859dafd076ec0ab12d7d40
+URL:		https://xorg.freedesktop.org/
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	rpmbuild(macros) >= 1.389
 BuildRequires:	xorg-proto-randrproto-devel
 BuildRequires:	xorg-proto-videoproto-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.2
+BuildRequires:	xorg-proto-xproto-devel
+BuildRequires:	xorg-util-util-macros >= 1.8
 BuildRequires:	xorg-xserver-server-devel >= 1.0.99.901
 %{?requires_xorg_xserver_videodrv}
 Requires:	xorg-xserver-server >= 1.0.99.901
@@ -41,9 +39,6 @@ telewizyjne bt848/bt878.
 
 %prep
 %setup -q -n xf86-video-v4l-%{version}
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
 
 %build
 %{__libtoolize}
@@ -62,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{_libdir}/xorg/modules/*/*.la
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/xorg/modules/*/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
